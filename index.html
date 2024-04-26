@@ -8,7 +8,7 @@
 <body>
   <header>
       <h1>Wunderlust Travel </h1>
-      (logo.png)
+      <img src="logo.png" alt="wunderlust travel's logo">
       <p>Let Wunderlust Travel help you plan the trip of your dreams!</p>
   </header>
       <nav>
@@ -20,7 +20,7 @@
         </ul>
       </nav>
 <main>
-    <section id="destination">
+    <section id="destination-section">
         <h2>Destinations</h2>
             <p>Majorca</p>
             <p>Imagine an island with turquoise blue waters, secret coves, soft golden sands, lush green foliage, rugged mountains, picturesque villages and a vibrant capital city. The island and its capital, Palma, are overflowing with character, while its beaches are famous all around the world, making it one of the most sought-after summer destinations.</p>
@@ -44,7 +44,7 @@
   <polyline points="9 6 15 12 9 18" />
 </svg>
 </div>
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
 <h3>Places to stay</h3>
 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bed" width="150" height="150" viewBox="0 0 24 24" stroke-width="1" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -90,21 +90,21 @@
     <h2>Testimonials</h2>
   
 <article>
-    <p><strong>Miranda Blake</strong></p>
+  <h3>Miranda Blake</h3>
     <img src="miranda-blake.png" alt="Miranda Blake">
     <p>Traveling From: London, England</p>
     <p> “I traveled here for business, but my stay was extended. Now it is my home.”</p>
 </article>
    
     <article>
-        <p><strong>Max Winter</strong></p>
+        <h3>Max Winter</h3>
         <img src="max-winter.png" alt="Max Winter">
         <p>Traveling From: Berlin, Germany</p>
         <p>“Great escape from my reality. Beautiful sunsets, wonderful people, great beer. ”</p>
     </article>
    
     <article>
-        <p><strong>Inés Villegoes</strong></p>
+        <h3>Inés Villegoes</h3>
         <img src="ines-villegoes.png" alt="Inés Villegoes">
        <p> Traveling From: Barcelona, Spain</p>
         <p>“A very safe environment for all travelers.”</p>
@@ -112,7 +112,7 @@
     
   
     <article>
-        <p><strong>Carmen Lorenzo</strong></p>
+        <h3>Carmen Lorenzo</h3>
         <img src="carmen-lorenzo.png" alt="Carmen Lorenzo">
         <p>Traveling From: Madrid, Spain</p>
         <p>“Live, laugh, love-- everything you need in Majorca.”</p>
@@ -132,7 +132,7 @@
 </svg>
 <p>Size: 1,405 miles squared</p>
 
-<p><strong>Elevation</strong></p>
+<h3>Elevation</h3>
 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-top-bar" width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#a905b6" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <line x1="12" y1="21" x2="12" y2="3" />
@@ -141,7 +141,7 @@
 </svg>
 <p>Elevation: 4,741 feet</p>
 
-<p><strong>Location</strong></p>
+<h3>Location</h3>
 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#a905b6" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <circle cx="12" cy="11" r="3" />
@@ -149,7 +149,7 @@
 </svg>
 <p>Location: Mediterranean </p>
 
-<p><strong>Population</strong></p>
+<h3>Population</h3>
 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#a905b6" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <circle cx="9" cy="7" r="4" />
@@ -161,30 +161,61 @@
 <p>Population: 923,608</p>
 </section>
 
-
+<section id="contact">
+<h2>Contact Us</h2>
 <form action="#" method="post">
-    <h2>Contact Us</h2>
     <label for="firstName">First Name:</label>
     <input type="text" id="firstName" name="firstName" required placeholder="Enter first name">
     
     <label for="lastName">Last Name:</label>
-    <input type="text" id="lastName" itemid="lastName" required placeholder="Enter last name">
+    <input type="text" id="lastName" name="lastName" required placeholder="Enter last name">
    
     <fieldset>
         <legend>Contact method</legend>
-        Contact Method (Email, Text, Phone)
-        Email Address (Enter Email)
-        Phone Number (Enter telephone number)
-    </fieldset>
-        
-        Destination (Barcelona, Granada, Ibiza, Madrid, Majorca, Seville, Tenerife, Valencia)
-    Travel Time (Fall, Winter, Spring, Summer, Flexible)
+        <input type="radio" id="email" name="contact-method" value="email" required>
+        <label for="email">Email</label><br>
+        <input type="radio" id="text" name="contact-method" value="text">
+        <label for="text">Text</label><br>
+        <input type="radio" id="phone" name="contact-method" value="phone">
+        <label for="phone">Phone</label><br>
+       
+    </fieldset><br>
+        <label for="email">Email Address:</label>
+        <input type="text" id="email-address" name="email-address" required placeholder="Enter email"><br>
+     
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone-number" name="phone-number" required placeholder="Enter telephone number"><br>
+    
+        <label for="destination">Destination</label>
+        <select name="destination" id="destination" required>
+            <option value="" disabled selected> Select destination</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Granada">Granada</option>
+            <option value="Ibiza">Ibiza</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Majora">Majora</option>
+            <option value="Seville">Seville</option>
+            <option value="Tenerife">Tenerife</option>
+            <option value="Valencia">Valencia</option>
+        </select><br>
+        <select name="travel-time" id="travel-time" required>
+            <option value="" disabled selected>Select travel time</option>
+            <option value="Fall">Fall</option>
+            <option value="Winter">Winter</option>
+            <option value="Spring">Spring</option>
+            <option value="Summer">Summer</option>
+            <option value="Flexible">Flexible</option>
+        </select>
 </form>
-
+</section>
 </main>
+<footer>
 
-Copyright 2021 Wunderlust
-Privacy Statement
-Terms of Service
+    <p>Copyright 2021 Wunderlust</p>
+<ul>
+    <li><a href="#">Privacy Statement</a></li>
+    <li><a href="#">Terms of Service</a></li>
+</ul>
+</footer>
 </body>
 </html>
